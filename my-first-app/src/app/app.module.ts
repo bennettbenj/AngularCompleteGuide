@@ -1,17 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
+import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ServerComponent,
+    ServersComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
-})
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+}
+)
 export class AppModule { }
