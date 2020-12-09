@@ -9,4 +9,6 @@ export class ServerComponent {
 
     serverId: number = 10;
     serverStatus: string = 'offline';
+    serverCreated = false;
+    
 }
