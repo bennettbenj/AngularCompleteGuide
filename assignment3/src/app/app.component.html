@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <button type="button" class="btn btn-primary" (click)="onButtonClick()">Display Details</button>
+            <p *ngIf="displayText">Secret Password ='tuna'</p>
+            <p *ngFor="let click of clicks" [ngStyle]="{background: past5thParagraph()}">{{ click }}</p>
+        </div>
+    </div>
+</div>
