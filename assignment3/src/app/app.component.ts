@@ -17,7 +17,7 @@ export class AppComponent {
     this.currentParagraph++;
   }
 
-  getColor(){
+  past5thParagraph(){
     if(this.currentParagraph > 4) return 'blue'
     else return null;
   }
