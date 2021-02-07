@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-new-account',
@@ -8,11 +9,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class NewAccountComponent {
   @Output() accountAdded = new EventEmitter<{name: string, status: string}>();
 
-  onCreateAccount(accountName: string, accountStatus: string) {
-    this.accountAdded.emit({
-      name: accountName,
-      status: accountStatus
-    });
-    console.log('A server status changed, new status: ' + accountStatus);
+  constructor(private userService:UsersService){}
+
+  onCreateAccount(name: string, status: string) {
+    this.userService.addAccount({name, status})
   }
 }
